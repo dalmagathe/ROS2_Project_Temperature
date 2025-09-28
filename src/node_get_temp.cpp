@@ -64,8 +64,8 @@ private:
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr publisher_;
 
-    // Creation of the subscriber to get to controller data and it to the tempearature as we do not have a systeme to change it directly
-    // otherwise, the controller would have been send to it instead of here
+    // Creation of the subscriber to obtain the controller result and add it to the temperature, as we do not have a system that allows us to modify it directly. 
+    // Otherwise, the controller would have been sent to the system rather than here.
     rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr subscription_;
 };
 
